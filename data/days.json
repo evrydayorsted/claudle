@@ -28,8 +28,8 @@
     },
     {
       "date": "2026-11-07",
-      "prompt": "List three rules of chess",
-      "aiOutput": "Sure, here are three: each piece moves in its own specific pattern, you must move your king out of check immediately, and checkmate ends the game."
+      "prompt": "Write a toast for grandma",
+      "aiOutput": "Here's to Grandma: the only person who can scold you and spoil you in the very same sentence. We love you more than words can say - cheers!"
     },
     {
       "date": "2026-11-08",
@@ -43,14 +43,6 @@
     }
   ],
   "rotation": [
-    {
-      "prompt": "Write a haiku about rain",
-      "aiOutput": "Soft rain taps the glass\nStreets shine with borrowed starlight\nThe city exhales"
-    },
-    {
-      "prompt": "Explain recursion using simple words",
-      "aiOutput": "Recursion is when a function solves a problem by calling itself on smaller versions of that same problem, until it reaches a simple case it can answer directly, like a set of mirrors reflecting a smaller copy of themselves."
-    },
     {
       "prompt": "Name the capital of Mongolia",
       "aiOutput": "The capital of Mongolia is Ulaanbaatar, a city on the steppe known for blending nomadic tradition with rapid modern growth."
@@ -68,8 +60,16 @@
       "aiOutput": "The easiest way to tell them apart is the snout: crocodiles have a narrower, V-shaped snout, while alligators have a broader, U-shaped one."
     },
     {
-      "prompt": "Explain gravity using simple terms",
-      "aiOutput": "Gravity is the invisible pull that draws objects toward each other, which is why things fall toward the ground instead of floating off into space."
+      "prompt": "Write a pun about cheese",
+      "aiOutput": "I tried to make a joke about cheese, but it was too cheesy and everyone just brie-zed right past it."
+    },
+    {
+      "prompt": "Give one excuse for lateness",
+      "aiOutput": "Sorry I'm late - my cat held an emergency meeting on my keyboard and refused to adjourn until I'd apologized personally."
+    },
+    {
+      "prompt": "Write a tagline for pizza",
+      "aiOutput": "Pizza: because adulting is easier with extra cheese."
     }
   ]
 }
