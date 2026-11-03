@@ -5,6 +5,36 @@
       "date": "2026-11-02",
       "prompt": "List three benefits of exercise",
       "aiOutput": "Sure, here are three: exercise strengthens your heart and lungs, boosts your mood by releasing endorphins, and helps you sleep more soundly at night."
+    },
+    {
+      "date": "2026-11-03",
+      "prompt": "Write a haiku about coffee",
+      "aiOutput": "Steam curls from the cup\nBitter warmth wakes quiet thoughts\nMorning starts again"
+    },
+    {
+      "date": "2026-11-04",
+      "prompt": "List three uses for vinegar",
+      "aiOutput": "Sure, here are three: it cuts through grease when cleaning, it brightens flavor in salad dressings, and a splash in rinse water helps keep fabric soft."
+    },
+    {
+      "date": "2026-11-05",
+      "prompt": "List four bicycle parts simply",
+      "aiOutput": "Sure: the frame holds everything together, the handlebars steer the front wheel, the pedals power the chain, and the brakes slow you down."
+    },
+    {
+      "date": "2026-11-06",
+      "prompt": "Write a haiku about autumn",
+      "aiOutput": "Leaves let go of green\nCool air carries them sideways\nThe trees grow lighter"
+    },
+    {
+      "date": "2026-11-07",
+      "prompt": "List three rules of chess",
+      "aiOutput": "Sure, here are three: each piece moves in its own specific pattern, you must move your king out of check immediately, and checkmate ends the game."
+    },
+    {
+      "date": "2026-11-08",
+      "prompt": "Write one riddle about shadows",
+      "aiOutput": "I follow you all day but vanish at night, I stretch out long when the sun sits low, and you can never quite catch me. What am I?"
     }
   ],
   "rotation": [
@@ -39,30 +69,6 @@
     {
       "prompt": "Explain gravity using simple terms",
       "aiOutput": "Gravity is the invisible pull that draws objects toward each other, which is why things fall toward the ground instead of floating off into space."
-    },
-    {
-      "prompt": "Write a haiku about coffee",
-      "aiOutput": "Steam curls from the cup\nBitter warmth wakes quiet thoughts\nMorning starts again"
-    },
-    {
-      "prompt": "List three uses for vinegar",
-      "aiOutput": "Sure, here are three: it cuts through grease when cleaning, it brightens flavor in salad dressings, and a splash in rinse water helps keep fabric soft."
-    },
-    {
-      "prompt": "List four bicycle parts simply",
-      "aiOutput": "Sure: the frame holds everything together, the handlebars steer the front wheel, the pedals power the chain, and the brakes slow you down."
-    },
-    {
-      "prompt": "Write a haiku about autumn",
-      "aiOutput": "Leaves let go of green\nCool air carries them sideways\nThe trees grow lighter"
-    },
-    {
-      "prompt": "List three rules of chess",
-      "aiOutput": "Sure, here are three: each piece moves in its own specific pattern, you must move your king out of check immediately, and checkmate ends the game."
-    },
-    {
-      "prompt": "Write one riddle about shadows",
-      "aiOutput": "I follow you all day but vanish at night, I stretch out long when the sun sits low, and you can never quite catch me. What am I?"
     }
   ]
 }

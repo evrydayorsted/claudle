@@ -32,6 +32,7 @@ function loadState(dateString) {
     finished: parsed.finished || false,
     won: parsed.won || false,
     hints: parsed.hints || { used: 0, revealed: {} },
+    clue: parsed.clue || null,
   };
 }
 
@@ -185,6 +186,17 @@ async function init() {
   outputEl.textContent = data.aiOutput;
 
   state = loadState(today);
+
+  // If the puzzle content for this date doesn't match what we last saw,
+  // the saved progress belongs to a different puzzle (e.g. a mid-day data
+  // fix) - discard it rather than show a mismatched board.
+  if (state.clue && state.clue !== data.aiOutput) {
+    state = { guesses: [], finished: false, won: false, hints: { used: 0, revealed: {} }, clue: data.aiOutput };
+  } else if (!state.clue) {
+    state.clue = data.aiOutput;
+  }
+  saveState(today);
+
   renderGrid();
   renderHints();
   updateHintButton();
