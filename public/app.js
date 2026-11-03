@@ -104,10 +104,23 @@ function renderHints() {
   }
 }
 
+function getGreenPositions() {
+  const positions = new Set();
+  for (const guess of state.guesses) {
+    guess.statuses.forEach((status, i) => {
+      if (status === 'green') positions.add(i);
+    });
+  }
+  return [...positions];
+}
+
 function updateHintButton() {
   const left = MAX_HINTS - state.hints.used;
+  const revealedPositions = Object.keys(state.hints.revealed).map(Number);
+  const coveredPositions = new Set([...revealedPositions, ...getGreenPositions()]);
+  const nothingLeftToReveal = coveredPositions.size >= 5;
   hintBtn.textContent = `Reveal a word (${left} left)`;
-  hintBtn.disabled = left <= 0 || state.finished;
+  hintBtn.disabled = left <= 0 || state.finished || nothingLeftToReveal;
 }
 
 async function revealHint() {
@@ -116,10 +129,11 @@ async function revealHint() {
   hintBtn.disabled = true;
   try {
     const revealedPositions = Object.keys(state.hints.revealed).map(Number);
+    const greenPositions = getGreenPositions();
     const res = await fetch('/api/hint', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ revealedPositions }),
+      body: JSON.stringify({ revealedPositions, greenPositions }),
     });
 
     if (!res.ok) {
@@ -222,11 +236,17 @@ async function submitGuess() {
       state.finished = true;
       state.won = data.won;
       recordResult(today, data.won);
+      fetch('/api/finish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ won: data.won }),
+      }).catch(() => {});
     }
 
     saveState(today);
     renderGrid();
     updateAttemptsText();
+    updateHintButton();
     guessInput.value = '';
 
     if (state.finished) {
