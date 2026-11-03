@@ -13,8 +13,8 @@
     },
     {
       "date": "2026-11-04",
-      "prompt": "List three uses for vinegar",
-      "aiOutput": "Sure, here are three: it cuts through grease when cleaning, it brightens flavor in salad dressings, and a splash in rinse water helps keep fabric soft."
+      "prompt": "Explain photosynthesis to a child",
+      "aiOutput": "Plants eat sunlight instead of food like we do! They take in light, water, and air, and turn it into yummy energy that helps them grow big and strong."
     },
     {
       "date": "2026-11-05",
@@ -35,6 +35,11 @@
       "date": "2026-11-08",
       "prompt": "Write one riddle about shadows",
       "aiOutput": "I follow you all day but vanish at night, I stretch out long when the sun sits low, and you can never quite catch me. What am I?"
+    },
+    {
+      "date": "2026-11-09",
+      "prompt": "List three uses for vinegar",
+      "aiOutput": "Sure, here are three: it cuts through grease when cleaning, it brightens flavor in salad dressings, and a splash in rinse water helps keep fabric soft."
     }
   ],
   "rotation": [
@@ -49,10 +54,6 @@
     {
       "prompt": "Name the capital of Mongolia",
       "aiOutput": "The capital of Mongolia is Ulaanbaatar, a city on the steppe known for blending nomadic tradition with rapid modern growth."
-    },
-    {
-      "prompt": "Explain photosynthesis to a child",
-      "aiOutput": "Plants eat sunlight instead of food like we do! They take in light, water, and air, and turn it into yummy energy that helps them grow big and strong."
     },
     {
       "prompt": "Give one tip for focus",
