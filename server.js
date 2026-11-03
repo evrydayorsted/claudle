@@ -71,7 +71,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === 'GET' && req.url === '/api/today') {
     const dateString = todayDateString();
     const entry = getEntryForDate(dateString);
-    stats.recordPlay(dateString);
+    stats.recordRefresh(dateString);
     stats.recordTotalRefresh();
     sendJson(res, 200, { date: dateString, aiOutput: entry.aiOutput });
     return;
@@ -89,6 +89,7 @@ const server = http.createServer(async (req, res) => {
       const entry = getEntryForDate(dateString);
       const results = await gradeGuess(guess, entry.prompt);
       const won = results.every((r) => r.status === 'green');
+      stats.recordGuess(dateString);
       stats.recordTotalGuess();
       sendJson(res, 200, { results, won });
     } catch (err) {
