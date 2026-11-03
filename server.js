@@ -72,7 +72,6 @@ const server = http.createServer(async (req, res) => {
     const dateString = todayDateString();
     const entry = getEntryForDate(dateString);
     stats.recordPlay(dateString);
-    stats.recordTotalHit();
     sendJson(res, 200, { date: dateString, aiOutput: entry.aiOutput });
     return;
   }
@@ -89,6 +88,7 @@ const server = http.createServer(async (req, res) => {
       const entry = getEntryForDate(dateString);
       const results = await gradeGuess(guess, entry.prompt);
       const won = results.every((r) => r.status === 'green');
+      stats.recordTotalGuess();
       sendJson(res, 200, { results, won });
     } catch (err) {
       sendJson(res, 400, { error: 'Invalid request body' });
@@ -141,7 +141,10 @@ const server = http.createServer(async (req, res) => {
     try {
       const body = await readJsonBody(req);
       const dateString = todayDateString();
-      stats.recordResult(dateString, Boolean(body.won));
+      const won = Boolean(body.won);
+      stats.recordResult(dateString, won);
+      if (won) stats.recordTotalWin();
+      else stats.recordTotalLoss();
       sendJson(res, 200, { ok: true });
     } catch (err) {
       sendJson(res, 400, { error: 'Invalid request body' });
@@ -151,8 +154,8 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'GET' && req.url === '/api/stats') {
     const byDate = stats.readStats();
-    const totalPlays = await stats.getTotalHits();
-    sendJson(res, 200, { ...byDate, totalPlays });
+    const totals = await stats.getTotalCounters();
+    sendJson(res, 200, { ...byDate, ...totals });
     return;
   }
 
