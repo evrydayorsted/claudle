@@ -18,8 +18,8 @@
     },
     {
       "date": "2026-11-05",
-      "prompt": "List four bicycle parts simply",
-      "aiOutput": "Sure: the frame holds everything together, the handlebars steer the front wheel, the pedals power the chain, and the brakes slow you down."
+      "prompt": "Tell a short knock-knock joke",
+      "aiOutput": "Knock, knock! Who's there? Lettuce. Lettuce who? Lettuce in, it's freezing out here!"
     },
     {
       "date": "2026-11-06",
@@ -38,8 +38,8 @@
     },
     {
       "date": "2026-11-09",
-      "prompt": "List three uses for vinegar",
-      "aiOutput": "Sure, here are three: it cuts through grease when cleaning, it brightens flavor in salad dressings, and a splash in rinse water helps keep fabric soft."
+      "prompt": "Write a lucky fortune cookie",
+      "aiOutput": "You will stumble into exactly what you need, probably while looking for something else entirely."
     }
   ],
   "rotation": [
