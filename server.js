@@ -61,6 +61,13 @@ function sendJson(res, statusCode, payload) {
 }
 
 const server = http.createServer(async (req, res) => {
+  if (req.method === 'GET' && req.url === '/healthz') {
+    // Keep-alive pings (e.g. cron-job.org) should hit this instead of
+    // /api/today, which records a play on every request.
+    sendJson(res, 200, { ok: true });
+    return;
+  }
+
   if (req.method === 'GET' && req.url === '/api/today') {
     const dateString = todayDateString();
     const entry = getEntryForDate(dateString);
