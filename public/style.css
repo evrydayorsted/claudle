@@ -317,6 +317,10 @@ button:disabled {
   z-index: 100;
 }
 
+.overlay.hidden {
+  display: none;
+}
+
 .modal {
   position: relative;
   width: 100%;
