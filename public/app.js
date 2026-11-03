@@ -16,6 +16,8 @@ const resultSection = document.getElementById('result-section');
 const resultHeadlineEl = document.getElementById('result-headline');
 const realPromptEl = document.getElementById('real-prompt');
 const streakEl = document.getElementById('streak');
+const shareBtn = document.getElementById('share-btn');
+const shareFeedbackEl = document.getElementById('share-feedback');
 const rulesOverlay = document.getElementById('rules-overlay');
 const rulesCloseBtn = document.getElementById('rules-close');
 const rulesGotItBtn = document.getElementById('rules-got-it');
@@ -163,6 +165,45 @@ function updateAttemptsText() {
     : `${remaining} guess${remaining === 1 ? '' : 'es'} left`;
 }
 
+const SITE_URL = 'https://claudle.onrender.com';
+const SQUARE_EMOJI = { green: '🟩', yellow: '🟨', red: '🟥' };
+
+function formatShortDate(dateString) {
+  const d = new Date(`${dateString}T00:00:00Z`);
+  return `${d.getUTCMonth() + 1}/${d.getUTCDate()}`;
+}
+
+function buildShareText() {
+  const attempts = state.won ? String(state.guesses.length) : 'X';
+  const header = `Claudle ${formatShortDate(today)} ${attempts}/${MAX_ATTEMPTS}`;
+  const grid = state.guesses
+    .map((guess) => guess.statuses.map((status) => SQUARE_EMOJI[status]).join(''))
+    .join('\n');
+  return `${header}\n\n${grid}\n\n${SITE_URL}`;
+}
+
+async function shareScore() {
+  const text = buildShareText();
+  shareFeedbackEl.classList.add('hidden');
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ text });
+      return;
+    } catch (err) {
+      if (err.name === 'AbortError') return;
+    }
+  }
+
+  try {
+    await navigator.clipboard.writeText(text);
+    shareFeedbackEl.textContent = 'Copied to clipboard!';
+  } catch (err) {
+    shareFeedbackEl.textContent = text;
+  }
+  shareFeedbackEl.classList.remove('hidden');
+}
+
 async function showFinished() {
   guessSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
@@ -280,6 +321,8 @@ rulesOverlay.classList.remove('hidden');
 
 rulesCloseBtn.addEventListener('click', hideRules);
 rulesGotItBtn.addEventListener('click', hideRules);
+
+shareBtn.addEventListener('click', shareScore);
 
 hintBtn.addEventListener('click', revealHint);
 submitBtn.addEventListener('click', submitGuess);

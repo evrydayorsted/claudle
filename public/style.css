@@ -299,6 +299,15 @@ button:disabled {
   font-size: 0.9rem;
 }
 
+.share-feedback {
+  text-align: center;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 .come-back {
   text-align: center;
   color: var(--muted);
