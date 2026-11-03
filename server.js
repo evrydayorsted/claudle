@@ -65,6 +65,7 @@ const server = http.createServer(async (req, res) => {
     const dateString = todayDateString();
     const entry = getEntryForDate(dateString);
     stats.recordPlay(dateString);
+    stats.recordTotalHit();
     sendJson(res, 200, { date: dateString, aiOutput: entry.aiOutput });
     return;
   }
@@ -142,7 +143,9 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.method === 'GET' && req.url === '/api/stats') {
-    sendJson(res, 200, stats.readStats());
+    const byDate = stats.readStats();
+    const totalPlays = await stats.getTotalHits();
+    sendJson(res, 200, { ...byDate, totalPlays });
     return;
   }
 
