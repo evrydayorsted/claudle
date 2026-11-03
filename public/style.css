@@ -305,3 +305,76 @@ button:disabled {
   font-size: 0.85rem;
   margin-top: 16px;
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.modal h2 {
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+
+.modal p {
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.example-text {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--text);
+  background: transparent;
+}
+
+.rules-list {
+  padding-left: 18px;
+  margin: 10px 0;
+  color: var(--text);
+}
+
+.rules-list li {
+  margin-bottom: 6px;
+}
+
+.example-row {
+  margin: 14px 0;
+}

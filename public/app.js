@@ -16,6 +16,9 @@ const resultSection = document.getElementById('result-section');
 const resultHeadlineEl = document.getElementById('result-headline');
 const realPromptEl = document.getElementById('real-prompt');
 const streakEl = document.getElementById('streak');
+const rulesOverlay = document.getElementById('rules-overlay');
+const rulesCloseBtn = document.getElementById('rules-close');
+const rulesGotItBtn = document.getElementById('rules-got-it');
 
 let today = null;
 let state = { guesses: [], finished: false, won: false, hints: { used: 0, revealed: {} } };
@@ -268,6 +271,18 @@ async function submitGuess() {
     submitBtn.disabled = false;
   }
 }
+
+function hideRules() {
+  rulesOverlay.classList.add('hidden');
+  localStorage.setItem(key('seen_rules'), 'true');
+}
+
+if (!localStorage.getItem(key('seen_rules'))) {
+  rulesOverlay.classList.remove('hidden');
+}
+
+rulesCloseBtn.addEventListener('click', hideRules);
+rulesGotItBtn.addEventListener('click', hideRules);
 
 hintBtn.addEventListener('click', revealHint);
 submitBtn.addEventListener('click', submitGuess);

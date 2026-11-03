@@ -7,6 +7,30 @@
 <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <div id="rules-overlay" class="overlay hidden">
+    <div class="modal">
+      <button id="rules-close" class="modal-close" aria-label="Close">&times;</button>
+      <h2>How to play</h2>
+      <p>Every day, Claudle shows you something an AI said. Your job is to guess the exact 5-word instruction that made it say that, in 5 tries.</p>
+      <p>Each guess must be 5 words. After you submit one, every word gets colored:</p>
+      <div class="grid-row example-row">
+        <div class="tile green">WRITE</div>
+        <div class="tile yellow">POEM</div>
+        <div class="tile red">THE</div>
+        <div class="tile green">ABOUT</div>
+        <div class="tile red">DOGS</div>
+      </div>
+      <ul class="rules-list">
+        <li><span class="swatch green"></span> <strong>Green</strong> — right word, right spot</li>
+        <li><span class="swatch yellow"></span> <strong>Yellow</strong> — a synonym, or the right word in the wrong spot</li>
+        <li><span class="swatch red"></span> <strong>Red</strong> — way off</li>
+      </ul>
+      <p class="example-text">Example: the real prompt is "Write a haiku about rain." You guessed "Write a poem about dogs." WRITE and ABOUT are exactly right, POEM turns yellow because it's a synonym of "haiku," and THE and DOGS are way off.</p>
+      <p>Stuck? The "Reveal a word" button shows up to 3 words of the answer for you.</p>
+      <button id="rules-got-it" class="secondary-btn">Got it</button>
+    </div>
+  </div>
+
   <main class="card">
     <header>
       <h1>Claudle</h1>
