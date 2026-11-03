@@ -72,6 +72,7 @@ const server = http.createServer(async (req, res) => {
     const dateString = todayDateString();
     const entry = getEntryForDate(dateString);
     stats.recordPlay(dateString);
+    stats.recordTotalRefresh();
     sendJson(res, 200, { date: dateString, aiOutput: entry.aiOutput });
     return;
   }
