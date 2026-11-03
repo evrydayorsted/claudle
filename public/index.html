@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claudle</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Claudle</h1>
+      <p class="subtitle">Guess the 5-word prompt that got this answer.</p>
+      <p class="date" id="date"></p>
+    </header>
+
+    <section class="output-box">
+      <p class="label">The AI said</p>
+      <p class="ai-output" id="ai-output">Loading…</p>
+    </section>
+
+    <section class="legend">
+      <span class="legend-item"><span class="swatch green"></span> right word, right spot</span>
+      <span class="legend-item"><span class="swatch yellow"></span> synonym or right word, wrong spot</span>
+      <span class="legend-item"><span class="swatch red"></span> way off</span>
+    </section>
+
+    <section class="hint-section">
+      <div class="hint-row" id="hint-row"></div>
+      <button id="hint-btn" class="secondary-btn">Reveal a word (3 left)</button>
+    </section>
+
+    <section id="grid"></section>
+
+    <section id="guess-section">
+      <p class="attempts" id="attempts"></p>
+      <input id="guess" type="text" placeholder="Type your 5-word guess…" autocomplete="off" />
+      <p class="error hidden" id="error"></p>
+      <button id="submit">Submit guess</button>
+    </section>
+
+    <section id="result-section" class="hidden">
+      <p class="result-headline" id="result-headline"></p>
+      <div class="answer-box">
+        <p class="label">The real prompt</p>
+        <p id="real-prompt"></p>
+      </div>
+      <p class="streak" id="streak"></p>
+      <p class="come-back">Come back tomorrow for a new prompt.</p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

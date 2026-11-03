@@ -1,0 +1,44 @@
+{
+  "_comment": "Claudle v2. Each entry is {prompt, aiOutput}. 'prompt' is the secret 5-word instruction (the answer players guess). 'aiOutput' is what the AI said in response, shown to players as the clue. 'dated' entries are shown on that exact calendar date; 'rotation' entries fill every other date, picked deterministically by day-of-year so everyone sees the same puzzle on a given day. Extend via scripts/generate-day.js once ANTHROPIC_API_KEY is available.",
+  "dated": [
+    {
+      "date": "2026-11-02",
+      "prompt": "List three benefits of exercise",
+      "aiOutput": "Sure, here are three: exercise strengthens your heart and lungs, boosts your mood by releasing endorphins, and helps you sleep more soundly at night."
+    }
+  ],
+  "rotation": [
+    {
+      "prompt": "Write a haiku about rain",
+      "aiOutput": "Soft rain taps the glass\nStreets shine with borrowed starlight\nThe city exhales"
+    },
+    {
+      "prompt": "Explain recursion using simple words",
+      "aiOutput": "Recursion is when a function solves a problem by calling itself on smaller versions of that same problem, until it reaches a simple case it can answer directly, like a set of mirrors reflecting a smaller copy of themselves."
+    },
+    {
+      "prompt": "Name the capital of Mongolia",
+      "aiOutput": "The capital of Mongolia is Ulaanbaatar, a city on the steppe known for blending nomadic tradition with rapid modern growth."
+    },
+    {
+      "prompt": "Explain photosynthesis to a child",
+      "aiOutput": "Plants eat sunlight instead of food like we do! They take in light, water, and air, and turn it into yummy energy that helps them grow big and strong."
+    },
+    {
+      "prompt": "Give one tip for focus",
+      "aiOutput": "Try working in short, timed bursts, like twenty-five minutes of focused work followed by a five-minute break, so your brain gets regular rest instead of burning out."
+    },
+    {
+      "prompt": "Describe the color blue simply",
+      "aiOutput": "Blue often feels cool and calm, like the soothing touch of cold water, and people associate it with wide open spaces such as the sky or the sea."
+    },
+    {
+      "prompt": "Compare crocodiles and alligators briefly",
+      "aiOutput": "The easiest way to tell them apart is the snout: crocodiles have a narrower, V-shaped snout, while alligators have a broader, U-shaped one."
+    },
+    {
+      "prompt": "Explain gravity using simple terms",
+      "aiOutput": "Gravity is the invisible pull that draws objects toward each other, which is why things fall toward the ground instead of floating off into space."
+    }
+  ]
+}

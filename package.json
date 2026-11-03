@@ -1,0 +1,13 @@
+{
+  "name": "claudle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily Wordle-style game: guess the 5-word prompt that produced the AI's output.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
