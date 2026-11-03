@@ -163,14 +163,14 @@ function updateAttemptsText() {
 async function showFinished() {
   guessSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
-  resultHeadlineEl.textContent = state.won ? 'You got it!' : 'Out of guesses';
+  resultHeadlineEl.textContent = state.won ? '🎉 You got it!' : '❌ Out of guesses';
   hintBtn.disabled = true;
 
   const res = await fetch('/api/reveal');
   const data = await res.json();
   realPromptEl.textContent = data.prompt;
 
-  streakEl.textContent = `${getStreak()} day streak`;
+  streakEl.textContent = `🔥 ${getStreak()} day streak`;
 }
 
 async function init() {
