@@ -176,10 +176,12 @@ function formatShortDate(dateString) {
 function buildShareText() {
   const attempts = state.won ? String(state.guesses.length) : 'X';
   const header = `Claudle ${formatShortDate(today)} ${attempts}/${MAX_ATTEMPTS}`;
+  const hintsUsed = state.hints.used;
+  const hintsLine = `${hintsUsed} hint${hintsUsed === 1 ? '' : 's'} used`;
   const grid = state.guesses
     .map((guess) => guess.statuses.map((status) => SQUARE_EMOJI[status]).join(''))
     .join('\n');
-  return `${header}\n\n${grid}\n\n${SITE_URL}`;
+  return `${header}\n${hintsLine}\n\n${grid}\n\n${SITE_URL}`;
 }
 
 async function shareScore() {

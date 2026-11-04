@@ -18,28 +18,63 @@
     },
     {
       "date": "2026-11-05",
-      "prompt": "Tell a short knock-knock joke",
-      "aiOutput": "Knock, knock! Who's there? Lettuce. Lettuce who? Lettuce in, it's freezing out here!"
+      "prompt": "Tell one short silly joke",
+      "aiOutput": "Why did the scarecrow win an award? Because he was outstanding in his field!"
     },
     {
       "date": "2026-11-06",
-      "prompt": "Write a limerick about pirates",
+      "prompt": "Compose a limerick about pirates",
       "aiOutput": "There once was a pirate named Lee,\nWho searched every inch of the sea,\nHe'd shout out \"Ahoy!\"\nWith a gleam of pure joy,\nThen vanish for his daily tea."
     },
     {
       "date": "2026-11-07",
-      "prompt": "Write a toast for grandma",
+      "prompt": "Offer a toast for grandma",
       "aiOutput": "Here's to Grandma: the only person who can scold you and spoil you in the very same sentence. We love you more than words can say - cheers!"
     },
     {
       "date": "2026-11-08",
-      "prompt": "Write one riddle about shadows",
+      "prompt": "Share one riddle about shadows",
       "aiOutput": "I follow you all day but vanish at night, I stretch out long when the sun sits low, and you can never quite catch me. What am I?"
     },
     {
       "date": "2026-11-09",
-      "prompt": "Write a lucky fortune cookie",
+      "prompt": "Craft a lucky fortune cookie",
       "aiOutput": "You will stumble into exactly what you need, probably while looking for something else entirely."
+    },
+    {
+      "date": "2026-11-10",
+      "prompt": "Compare summer and winter briefly",
+      "aiOutput": "Summer brings long sunny days, warm temperatures, and plenty of outdoor fun, while winter brings short days, cold air, and cozy nights indoors."
+    },
+    {
+      "date": "2026-11-11",
+      "prompt": "Give one tip for sleep",
+      "aiOutput": "Try keeping your room cool, dark, and screen-free for the last hour before bed, since that combination helps your body naturally wind down."
+    },
+    {
+      "date": "2026-11-12",
+      "prompt": "Name a famous ancient wonder",
+      "aiOutput": "The Great Pyramid of Giza is one of the most famous ancient wonders, built thousands of years ago and still standing strong in Egypt today."
+    },
+    {
+      "date": "2026-11-13",
+      "prompt": "Share a proverb about patience",
+      "aiOutput": "Good things come to those who wait - a reminder that the best results often take time, steady effort, and a little patience."
+    },
+    {
+      "date": "2026-11-14",
+      "prompt": "Describe the color of autumn",
+      "aiOutput": "Autumn is a warm mix of deep orange, golden yellow, and rich red, like a forest slowly catching fire as the leaves change."
+    },
+    {
+      "date": "2026-11-15",
+      "prompt": "Suggest one game for rain",
+      "aiOutput": "Try a cozy round of charades indoors: it needs no equipment, gets everyone laughing, and turns a rainy afternoon into a fun memory."
+    },
+    {
+      "date": "2026-11-16",
+      "prompt": "Teach a fact about space",
+      "aiOutput": "A day on Venus is longer than its entire year, since the planet spins so slowly that it takes longer to rotate once than to orbit the sun."
     }
   ],
   "rotation": [
@@ -60,15 +95,15 @@
       "aiOutput": "The easiest way to tell them apart is the snout: crocodiles have a narrower, V-shaped snout, while alligators have a broader, U-shaped one."
     },
     {
-      "prompt": "Write a pun about cheese",
+      "prompt": "Share a pun about cheese",
       "aiOutput": "I tried to make a joke about cheese, but it was too cheesy and everyone just brie-zed right past it."
     },
     {
-      "prompt": "Give one excuse for lateness",
+      "prompt": "Offer one excuse for lateness",
       "aiOutput": "Sorry I'm late - my cat held an emergency meeting on my keyboard and refused to adjourn until I'd apologized personally."
     },
     {
-      "prompt": "Write a tagline for pizza",
+      "prompt": "Create a tagline for pizza",
       "aiOutput": "Pizza: because adulting is easier with extra cheese."
     }
   ]
