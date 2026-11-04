@@ -170,12 +170,12 @@ const SQUARE_EMOJI = { green: '🟩', yellow: '🟨', red: '🟥' };
 
 function formatShortDate(dateString) {
   const d = new Date(`${dateString}T00:00:00Z`);
-  return `${d.getUTCMonth() + 1}/${d.getUTCDate()}`;
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
 function buildShareText() {
   const attempts = state.won ? String(state.guesses.length) : 'X';
-  const header = `Claudle ${formatShortDate(today)} ${attempts}/${MAX_ATTEMPTS}`;
+  const header = `Claudle ${formatShortDate(today)} (${attempts}/${MAX_ATTEMPTS})`;
   const hintsUsed = state.hints.used;
   const hintsLine = `${hintsUsed} hint${hintsUsed === 1 ? '' : 's'} used`;
   const grid = state.guesses
