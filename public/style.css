@@ -123,7 +123,7 @@ h1 {
 
 .hint-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
   margin-bottom: 10px;
 }
@@ -140,6 +140,8 @@ h1 {
   font-size: 0.7rem;
   font-weight: 600;
   color: var(--muted);
+  overflow-wrap: anywhere;
+  overflow: hidden;
 }
 
 .hint-tile.revealed {
@@ -174,7 +176,7 @@ h1 {
 
 .grid-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
 }
 
@@ -191,7 +193,9 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text);
+  overflow-wrap: anywhere;
   word-break: break-word;
+  overflow: hidden;
   line-height: 1.1;
 }
 
